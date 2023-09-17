@@ -53,7 +53,14 @@ A alocação de recursos de memória e CPU para as funções deve ser configurad
 
 ![Atualizando configuração Lambda](/assets/update-function-settings.gif)
 
-Funções Lambda podem importar qualquer biblioteca disponível no gerenciador de pacotes do runtime escolhido (NPM no caso de NodeJS 18). Além disso, elas podem também integrar com bancos de dados e serviços de armazenamento além de publicar mensagens para filas e outras funções.
+Funções Lambda podem importar qualquer biblioteca disponível no gerenciador de pacotes do runtime escolhido (NPM no caso de NodeJS 18). Além disso, elas podem também integrar com bancos de dados e serviços de armazenamento além de publicar mensagens para filas e outras funções. 
+
+Essa seção apresentou uma função básica de "hello world" como exemplo. Abaixo listamos sugestões de funções que você pode implementar para aprender aspectos mais avançados de Serverless:
+
+1. **Somar dois números recebidos como parâmetro e retornar o resultado**: Explora como receber e processar parâmetros na função.
+2. **Usar uma biblioteca Javascript para gerar uma imagem aleatória. Retornar imagem na função**: Explora como importar bibliotecas para uso no código da função.
+3. **Receber um texto e salvar no Amazon S3**: Explora como integrar com outros serviços de nuvem, como o Amazon S3 para armazenamento.
+
 ## Ciclo de vida de funções Serverless
 
 Por natureza, funções serverless são efêmeras e sem estado. Efêmeras pois são instanciadas mediante um gatilho, processam uma requisição, e por fim são desprovisionadas. As plataformas serverless podem reaproveitar o ambiente de execução de uma função para gatilhos subsequentes, no entanto, a frequência e tempo de reaproveitamento não é configurável pelos desenvolvedores das funções. Por conta disso, não há garantias que dados de estado armazenados em memória durante uma execução ainda estejam acessíveis em execuções subsequentes. A imagem abaixo descreve o ciclo de vida de uma função AWS Lambda:
